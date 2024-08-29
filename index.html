@@ -5,9 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<!-- <script type="module" src="app.js"></script> -->
+<script type="module" src="form.js"></script>
 <body>
     
-    <script>
+    <h1>Formulaire d'ajout de personne</h1>
+    <!-- creation du formulaire -->
+     <form action="" id="forms">
+        <label for="prenom">Prenom:</label> <input type="text" id="prenom"> <br><br>
+        <label for="nom">Nom:</label> <input type="text" id="nom"><br><br>
+        <label for="phone">Phone:</label> <input type="tel" id="phone"><br><br>
+        <label for="mail">Mail:</label> <input type="email" id="mail"><br><br>
+        <input type="submit" value="Ajouter"> <br><br>
+     </form>
+
+     <!-- ajout tableau -->
+      <table border="2" id="tableau" style="width: 100%;">
+        <tr>
+            <th>Prenom</th>
+            <th>Nom</th>
+            <th>Phone</th>
+            <th>Mail</th>
+            <th>Actions</th>
+        </tr>
+      </table>
+
+
+
+    <!-- <script>
 //         Inverser une chaîne : écrivez une fonction qui inverse une chaîne donnée.
 // Compter les caractères : créez une fonction qui compte le nombre de caractères dans une chaîne.
 // Mettre les mots en majuscule : implémentez une fonction qui met en majuscule la première lettre de chaque mot dans une phrase.
@@ -104,6 +129,6 @@
         
         mathematique(5)
 
-    </script>
+    </script> -->
 </body>
 </html>
