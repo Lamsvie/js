@@ -12,35 +12,40 @@ myform.addEventListener("submit", function(event){
 
     //creation nouvelle entree de table
     const row = document.createElement("tr")
-    row.setAttribute("id", `row_${i}`)
-    row.innerHTML = `
-    <td>${prenom}</td>
-    <td>${nom}</td>
-    <td>${phone}</td>
-    <td>${mail}</td>
-    <td>
-        <button class="btnupdate">Modifier</button>
-        <button class="btnsupp">Supprimer</button>
-    </td>
-    `
+    //row.setAttribute("id", `row_${i}`)
+    row.innerHTML = `<td>${prenom}</td><td>${nom}</td><td>${phone}</td><td>${mail}</td><td><button class="btnupdate_${i}">Modifier</button><button class="btnsupp_${i}">Supprimer</button></td>`
     tableau.appendChild(row)
     i++
     myform.reset()
-    // const btnupdate = document.querySelector(".btnupdate")
-    // btnupdate.addEventListener("click", function(event){
-    //     event.preventDefault()
-    //     console.log(btnupdate.parentElement.getAttribute("id"))
-    // })
+    
     
 })
 
+
 tableau.addEventListener("click", function(event){
-    console.log(event)
+    const className = event.target.className
+    if (className.search("btnupdate") == 0) {
+        const btnupdate = document.querySelector(`.${className}`) //class du button update
+
+        const prenom = document.querySelector("#prenom")
+        const nom = document.querySelector("#nom")
+        const phone = document.querySelector("#phone")
+        const mail = document.querySelector("#mail")
+
+        // attribution des valeurs de la ligne dans le form
+        prenom.value = btnupdate.parentElement.parentElement.childNodes[0].innerText
+        nom.value = btnupdate.parentElement.parentElement.childNodes[1].innerText
+        phone.value = btnupdate.parentElement.parentElement.childNodes[2].innerText
+        mail.value = btnupdate.parentElement.parentElement.childNodes[3].innerText
+        
+        // suppression de la ligne
+        btnupdate.parentElement.parentElement.remove()
+
+        
+    }else{
+        const btnsupp = document.querySelector(`.${className}`)
+        btnsupp.parentElement.parentElement.remove()
+    }
+        
+    
 })
-
-
-
-
-
-
-// ajouter dans le tab en creant de nouvelle ligne

@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./output.css" rel="stylesheet">
+</head>
+<script type="module" src="article.js"></script>
+<body>
+  <header class="h-24 shadow-lg flex w-full">
+    <nav class="flex flex-row justify-between items-center w-full px-14">
+        <a href="" class="text-4xl font-bold">Article</a>
+        <ul class="flex flex-row gap-5 items-center text-lg">
+            <li><a href="">Archive</a></li>
+            <li><a href="">Vetements</a></li>
+            <li><a href="">Accessoirs</a></li>
+            <li><a href="">Chaussures</a></li>
+        </ul>
+        <div class="flex flex-row gap-3">
+            <button><svg class="h-8 w-8 text-gray-500"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <circle cx="10" cy="10" r="7" />  <line x1="21" y1="21" x2="15" y2="15" /></svg></button>
+            <button><svg class="h-8 w-8 text-gray-500"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />  <circle cx="12" cy="7" r="4" /></svg></button>
+            <button class="relative"><svg class="h-8 w-8 text-gray-500"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/>
+              </svg>
+              <div class="absolute -top-1 -right-1 bg-blue-600 rounded-full text-white px-1">2</div>
+              </button>
+        </div>
+    </nav>
+  </header>
+  <main>
+    <div class="h-44 flex items-center justify-center bg-gray-100">
+        <h1 class="text-4xl">Article</h1>
+    </div>
+    <div class="container mx-auto mt-40">
+        <div class="flex flex-row gap-3 px-5 bg-slate-300 py-4 text-lg font-semibold">
+            <span class="w-1/4">Image</span>
+            <span class="w-2/4">Produit</span>
+            <span class="w-1/4 text-right">Totale</span>
+        </div>
+        <div class="px-5 flex flex-row gap-3 mt-10 article">
+            <div class="w-1/4"><img src="Blanc_Pur_10L_370x370_crop_center.webp" alt="" srcset=""></div>
+            <div class="w-2/4 flex flex-col gap-5">
+                <h1 class="text-3xl font-semibold text-green-800">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h1>
+                <p class="text-xl"><span class="prix_unitaire">100</span> FCFA</p>
+                <div class="border-2 border-gray-200 w-fit px-4 py-2 flex flex-row items-center justify-center gap-5 rounded-lg">
+                    <button><svg class="h-8 w-8 text-gray-500 like"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" /></svg></button>
+                    <button><svg class="h-8 w-8 text-gray-500 minus"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <line x1="5" y1="12" x2="19" y2="12" /></svg></button>
+                    <span class="qnt text-2xl">1</span>
+                    <button><svg class="h-8 w-8 text-gray-500 plus"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <line x1="12" y1="5" x2="12" y2="19" />  <line x1="5" y1="12" x2="19" y2="12" /></svg></button>
+                </div>
+                <div><button class="bg-gray-300 px-4 py-2 rounded-lg text-lg font-medium supprimer">Supprimer</button></div>
+                <div class="error"></div>
+            </div>
+            <div class="w-1/4 text-right text-2xl font-semibold"><p></p><span class="mtn_Total">100</span> FCFA</p></div>
+        </div>
+    </div>
+  </main>
+</body>
+</html>
