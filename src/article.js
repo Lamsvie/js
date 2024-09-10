@@ -64,3 +64,14 @@ like()
 plus(i,qnt)
 minus(qnt)
 supprimer()
+
+function maskify(cc) {
+    let ccCopy = cc
+    for(let i=0; ccCopy.length-4; i++){
+      ccCopy.replace(cc[i], "#")
+    }
+    console.log(ccCopy)
+    return ccCopy
+  
+  }
+  maskify('4556364607935616')

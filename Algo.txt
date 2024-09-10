@@ -1,0 +1,37 @@
+Algorithme AnalyserPhrase
+    VAR 
+        longueur, nombreMots, nombreVoyelles : INTEGER
+        phrase : STRING
+        voyelles := ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U']
+
+        i : INTEGER
+        longueur := 0
+        nombreMots := 1
+        nombreVoyelles := 0
+        j : INTEGER
+    
+    BEGIN
+        // Lire la phrase et retirer le dernier caractère (le point)
+        phrase := PRINT("Entrer la phrase")
+        
+
+        WHILE ('.' != phrase[i]) DO
+            longueur ++
+
+            IF (phrase[i] === " ") DO
+                nombreMots ++
+            END_IF
+
+            FOR j FROM 0 TO taille.voyelles STEP j++ DO
+                if (phrase[i] === voyelles[j]) DO
+                    nombreVoyelles ++
+                END_IF
+            END_FOR
+        END_WHILE
+        
+        
+        // Afficher les résultats
+        PRINT("Longueur de la phrase : ", longueur)
+        PRINT("Nombre de mots : ", nombreMots)
+        PRINT("Nombre de voyelles : ", nombreVoyelles)
+    END

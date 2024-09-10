@@ -49,3 +49,13 @@ tableau.addEventListener("click", function(event){
         
     
 })
+
+const products = [     { id: 1, name: "Laptop", category: "electronics", price: 1200, inStock: 5 },     { id: 2, name: "Smartphone", category: "electronics", price: 800, inStock: 8 },     { id: 3, name: "Jeans", category: "clothing", price: 50, inStock: 15 },     { id: 4, name: "T-shirt", category: "clothing", price: 20, inStock: 30 },     { id: 5, name: "Blender", category: "electronics", price: 150, inStock: 10 },     { id: 6, name: "Bread", category: "food", price: 2, inStock: 50 },     { id: 7, name: "Milk", category: "food", price: 1.5, inStock: 40 } ];
+
+const sum = () => products.reduce((total, produit) => {
+    return (total + produit.price)
+}, 0)
+
+console.log(sum(products));
+
+

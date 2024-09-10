@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function maskify(cc) {
+        let ccCopy = cc
+        for(let i=0; ccCopy.length-4; i++){
+        ccCopy.replace(cc[i], "#")
+        }
+        console.log(ccCopy)
+        return ccCopy
+    
+    }
+    maskify('4556364607935616')
+    </script>
+</body>
+</html>
