@@ -1,0 +1,5 @@
+fonction Insert(v) ---> la fonctiin permet d'inserer un nombre en fin du tableau
+fonction Remove(i) ---> La fonction permet de supprimer la valeur se trouver à l'index (i)
+fonction Select(i) ---> La fonction renvoie la valeur se trouvant à l'index (i)
+fonction Update(i,v) ---> La founction ajoute la valeur (v) à l'index (i) du tableau
+fonction SpecialCount(v) ---> compare la valeur (v) à toutes les valeur du tableau pour retourner le nombre de valeur (v) se trouvant dans le tableau
