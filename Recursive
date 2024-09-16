@@ -1,0 +1,36 @@
+function isLeapYear(year) {
+  if (year % 400 === 0) {
+    return true;
+  } else if (year % 100 === 0) {
+    return false;
+  } else if (year % 4 === 0) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+function ticketPrice(age) {
+  if (age <= 12) {
+    return 10;
+  } else if (age <= 17) {
+    return 15; 
+  } else if (age > 17) {
+    return 20;
+  }
+  return 0; 
+}
+
+function dmdAgeRecursive() {
+  const age = prompt("Quel est votre âge?");
+  const price = ticketPrice(parseInt(age));
+  
+  if (age !== null && !isNaN(price)) {
+    alert("Le prix du billet est de " + price + " $.");
+  } else {
+    alert("Âge invalide, réessayez !");
+    dmdAgeRecursively();
+  }
+}
+
+
